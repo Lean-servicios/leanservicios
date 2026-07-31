@@ -23,7 +23,7 @@ export function Hero() {
           <img
             src={logoBlanco.url}
             alt="LEAN Servicios Integrales S.A.S."
-            className="h-14 w-auto sm:h-16"
+            className="h-16 w-auto sm:h-20"
             width={560}
             height={160}
           />
