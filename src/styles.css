@@ -39,6 +39,8 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-surface: var(--surface);
+  --color-brand-lime: var(--brand-lime);
+  --color-brand-lime-foreground: var(--brand-lime-foreground);
   --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --shadow-card: 0 1px 2px oklch(0.2 0.08 265 / 8%), 0 12px 32px -12px oklch(0.2 0.08 265 / 18%);
@@ -68,6 +70,9 @@
   --border: oklch(0.9 0.012 250);
   --input: oklch(0.9 0.012 250);
   --ring: oklch(0.32 0.22 265);
+  /* Tercer color de marca: verde claro de los uniformes de limpieza */
+  --brand-lime: oklch(0.86 0.19 120);
+  --brand-lime-foreground: oklch(0.25 0.06 130);
 }
 
 .dark {
