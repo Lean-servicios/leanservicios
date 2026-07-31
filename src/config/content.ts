@@ -2,7 +2,9 @@ import limpiezaImg from "@/assets/serv-limpieza.jpg";
 import fumigacionImg from "@/assets/serv-fumigacion.jpg";
 import verdesImg from "@/assets/serv-verdes.jpg";
 import obrasImg from "@/assets/serv-obras.jpg";
-import trabajo1 from "@/assets/trabajo-1.jpg";
+import limpiezaEventos from "@/assets/trabajo-limpieza-eventos.jpg.asset.json";
+import limpiezaAuditorio from "@/assets/trabajo-limpieza-auditorio.jpg.asset.json";
+import fumigacionEstadio from "@/assets/trabajo-fumigacion-estadio.jpg.asset.json";
 
 /** Contenido editable: servicios, proceso, diferenciales y trabajos. */
 
