@@ -12,16 +12,21 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background shadow-sm hover:bg-secondary hover:text-secondary-foreground",
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        ghost: "hover:bg-secondary hover:text-secondary-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        /* Variantes de marca LEAN */
+        accent: "bg-accent text-accent-foreground shadow hover:bg-accent/90",
+        hero: "bg-accent text-accent-foreground shadow-lift hover:bg-accent/90",
+        onDark:
+          "border border-primary-foreground/40 bg-primary-foreground/5 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/15",
       },
       size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        default: "h-10 px-5 py-2",
+        sm: "h-9 rounded-md px-3 text-xs",
+        lg: "h-12 rounded-md px-7 text-[0.95rem]",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {

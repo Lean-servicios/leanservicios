@@ -10,33 +10,89 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PoliticaDePrivacidadRouteImport } from './routes/politica-de-privacidad'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TerminosYCondicionesRouteImport } from './routes/terminos-y-condiciones'
+import { Route as TrabajaConNosotrosRouteImport } from './routes/trabaja-con-nosotros'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliticaDePrivacidadRoute = PoliticaDePrivacidadRouteImport.update({
+  id: '/politica-de-privacidad',
+  path: '/politica-de-privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TerminosYCondicionesRoute = TerminosYCondicionesRouteImport.update({
+  id: '/terminos-y-condiciones',
+  path: '/terminos-y-condiciones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrabajaConNosotrosRoute = TrabajaConNosotrosRouteImport.update({
+  id: '/trabaja-con-nosotros',
+  path: '/trabaja-con-nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
+  '/trabaja-con-nosotros': typeof TrabajaConNosotrosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
+  '/trabaja-con-nosotros': typeof TrabajaConNosotrosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
+  '/trabaja-con-nosotros': typeof TrabajaConNosotrosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/politica-de-privacidad'
+    | '/sitemap.xml'
+    | '/terminos-y-condiciones'
+    | '/trabaja-con-nosotros'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/politica-de-privacidad'
+    | '/sitemap.xml'
+    | '/terminos-y-condiciones'
+    | '/trabaja-con-nosotros'
+  id:
+    | '__root__'
+    | '/'
+    | '/politica-de-privacidad'
+    | '/sitemap.xml'
+    | '/terminos-y-condiciones'
+    | '/trabaja-con-nosotros'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PoliticaDePrivacidadRoute: typeof PoliticaDePrivacidadRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TerminosYCondicionesRoute: typeof TerminosYCondicionesRoute
+  TrabajaConNosotrosRoute: typeof TrabajaConNosotrosRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +104,44 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/politica-de-privacidad': {
+      id: '/politica-de-privacidad'
+      path: '/politica-de-privacidad'
+      fullPath: '/politica-de-privacidad'
+      preLoaderRoute: typeof PoliticaDePrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terminos-y-condiciones': {
+      id: '/terminos-y-condiciones'
+      path: '/terminos-y-condiciones'
+      fullPath: '/terminos-y-condiciones'
+      preLoaderRoute: typeof TerminosYCondicionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trabaja-con-nosotros': {
+      id: '/trabaja-con-nosotros'
+      path: '/trabaja-con-nosotros'
+      fullPath: '/trabaja-con-nosotros'
+      preLoaderRoute: typeof TrabajaConNosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PoliticaDePrivacidadRoute: PoliticaDePrivacidadRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TerminosYCondicionesRoute: TerminosYCondicionesRoute,
+  TrabajaConNosotrosRoute: TrabajaConNosotrosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
