@@ -104,7 +104,7 @@ export const trabajos: Trabajo[] = [
     descripcion: "Acondicionamiento de butacas, pasillos y sala antes y después de cada función.",
     ubicacion: null,
     imagen: limpiezaAuditorio.url,
-    foco: "center 40%",
+    foco: "center 25%",
   },
   {
     categoria: "Fumigación",
