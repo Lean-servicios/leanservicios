@@ -1,0 +1,80 @@
+import { Link } from "@tanstack/react-router";
+import { ExternalLink } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { areasEmpleo } from "@/config/content";
+import { siteConfig } from "@/config/site";
+
+export function Empleo({ compacto = false }: { compacto?: boolean }) {
+  const formUrl = siteConfig.airtablePostulantesFormUrl;
+
+  return (
+    <section id="empleo" className="bg-surface py-20 sm:py-28">
+      <div className="section-shell">
+        <div className="max-w-2xl">
+          <span className="eyebrow">Trabajá con nosotros</span>
+          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">Sumate al equipo de Lean</h2>
+          <p className="mt-4 text-muted-foreground">
+            Buscamos personas responsables, comprometidas y con ganas de desarrollarse en equipos
+            vinculados a servicios, mantenimiento, infraestructura, administración e Higiene y
+            Seguridad.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {areasEmpleo.map((a) => (
+            <article key={a.titulo} className="card-surface p-6">
+              <h3 className="text-lg">{a.titulo}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{a.texto}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="card-surface mt-12 p-6 sm:p-8">
+          <p className="max-w-3xl text-muted-foreground">
+            Completá el formulario con tus datos, experiencia y disponibilidad. Nuestro equipo de
+            Recursos Humanos revisará tu perfil y se comunicará cuando exista una oportunidad acorde.
+          </p>
+
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+            {formUrl ? (
+              <Button asChild variant="accent" size="lg">
+                <a href={formUrl} target="_blank" rel="noopener noreferrer">
+                  Completar mi postulación
+                  <ExternalLink className="size-4" aria-hidden />
+                </a>
+              </Button>
+            ) : (
+              <Button variant="accent" size="lg" disabled title="Configurar VITE_AIRTABLE_POSTULANTES_FORM_URL">
+                Completar mi postulación
+              </Button>
+            )}
+
+            {!compacto && (
+              <Button asChild variant="outline" size="lg">
+                <Link to="/trabaja-con-nosotros">Ver más información</Link>
+              </Button>
+            )}
+          </div>
+
+          {!formUrl && (
+            <p className="mt-4 rounded-md bg-secondary p-3 text-xs text-muted-foreground">
+              <strong>Nota de configuración:</strong> el botón se activa al cargar la URL pública del
+              formulario de Airtable en <code>VITE_AIRTABLE_POSTULANTES_FORM_URL</code> (o
+              directamente en <code>src/config/site.ts</code>).
+            </p>
+          )}
+
+          <p className="mt-5 text-xs text-muted-foreground">
+            Los datos ingresados serán utilizados exclusivamente para gestionar procesos de selección
+            y oportunidades laborales de Lean Service.{" "}
+            <Link to="/politica-de-privacidad" className="text-primary underline underline-offset-4">
+              Ver política de privacidad
+            </Link>
+            .
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
