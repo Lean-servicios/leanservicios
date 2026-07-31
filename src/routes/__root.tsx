@@ -77,11 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lean Service | Limpieza, Fumigación, Espacios Verdes y Obras Civiles" },
+      { title: "Lean | Limpieza, Fumigación, Espacios Verdes y Obras Civiles" },
       {
         name: "description",
         content:
-          "Lean Service brinda soluciones integrales de limpieza, fumigación, mantenimiento de espacios verdes y obras civiles adaptadas a empresas, industrias e instituciones.",
+          "Lean brinda soluciones integrales de limpieza, fumigación, mantenimiento de espacios verdes y obras civiles adaptadas a empresas, industrias e instituciones.",
       },
       { name: "author", content: "LEAN Servicios Integrales S.A.S." },
       { property: "og:site_name", content: "Lean Service" },
@@ -89,6 +89,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "es_AR" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#001A90" },
+      { property: "og:title", content: "Lean | Limpieza, Fumigación, Espacios Verdes y Obras Civiles" },
+      { name: "twitter:title", content: "Lean | Limpieza, Fumigación, Espacios Verdes y Obras Civiles" },
+      { property: "og:description", content: "Lean brinda soluciones integrales de limpieza, fumigación, mantenimiento de espacios verdes y obras civiles adaptadas a empresas, industrias e instituciones." },
+      { name: "twitter:description", content: "Lean brinda soluciones integrales de limpieza, fumigación, mantenimiento de espacios verdes y obras civiles adaptadas a empresas, industrias e instituciones." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/998d7072-1b89-4cae-9b78-37b9e0444f2e/id-preview-95bd3b86--0244e726-5eed-4e6b-b44e-e40cae74f6d8.lovable.app-1785532541779.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/998d7072-1b89-4cae-9b78-37b9e0444f2e/id-preview-95bd3b86--0244e726-5eed-4e6b-b44e-e40cae74f6d8.lovable.app-1785532541779.png" },
     ],
     links: [
       {
