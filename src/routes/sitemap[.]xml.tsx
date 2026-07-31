@@ -5,7 +5,7 @@ const BASE_URL = ""; // TODO: p. ej. "https://www.leanservice.com.ar"
 
 const rutas = ["/", "/trabaja-con-nosotros", "/politica-de-privacidad", "/terminos-y-condiciones"];
 
-export const Route = createFileRoute("/sitemap[.]xml")({
+export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: () => {

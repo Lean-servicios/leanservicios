@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PoliticaDePrivacidadRouteImport } from './routes/politica-de-privacidad'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TerminosYCondicionesRouteImport } from './routes/terminos-y-condiciones'
 import { Route as TrabajaConNosotrosRouteImport } from './routes/trabaja-con-nosotros'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const PoliticaDePrivacidadRoute = PoliticaDePrivacidadRouteImport.update({
   id: '/politica-de-privacidad',
   path: '/politica-de-privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TerminosYCondicionesRoute = TerminosYCondicionesRouteImport.update({
@@ -38,12 +44,14 @@ const TrabajaConNosotrosRoute = TrabajaConNosotrosRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
   '/trabaja-con-nosotros': typeof TrabajaConNosotrosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
   '/trabaja-con-nosotros': typeof TrabajaConNosotrosRoute
 }
@@ -51,6 +59,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
   '/trabaja-con-nosotros': typeof TrabajaConNosotrosRoute
 }
@@ -59,18 +68,21 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/politica-de-privacidad'
+    | '/sitemap.xml'
     | '/terminos-y-condiciones'
     | '/trabaja-con-nosotros'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/politica-de-privacidad'
+    | '/sitemap.xml'
     | '/terminos-y-condiciones'
     | '/trabaja-con-nosotros'
   id:
     | '__root__'
     | '/'
     | '/politica-de-privacidad'
+    | '/sitemap.xml'
     | '/terminos-y-condiciones'
     | '/trabaja-con-nosotros'
   fileRoutesById: FileRoutesById
@@ -78,6 +90,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PoliticaDePrivacidadRoute: typeof PoliticaDePrivacidadRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TerminosYCondicionesRoute: typeof TerminosYCondicionesRoute
   TrabajaConNosotrosRoute: typeof TrabajaConNosotrosRoute
 }
@@ -96,6 +109,13 @@ declare module '@tanstack/react-router' {
       path: '/politica-de-privacidad'
       fullPath: '/politica-de-privacidad'
       preLoaderRoute: typeof PoliticaDePrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/terminos-y-condiciones': {
@@ -118,6 +138,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PoliticaDePrivacidadRoute: PoliticaDePrivacidadRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TerminosYCondicionesRoute: TerminosYCondicionesRoute,
   TrabajaConNosotrosRoute: TrabajaConNosotrosRoute,
 }
