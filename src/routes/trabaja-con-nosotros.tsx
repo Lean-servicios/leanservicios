@@ -27,10 +27,10 @@ function TrabajaConNosotros() {
     <SiteLayout solidHeader>
       <div className="gradient-brand pt-28 pb-16 text-primary-foreground">
         <div className="section-shell">
-          <h1 className="text-3xl leading-tight sm:text-5xl">Sumate al equipo de Lean</h1>
+          <h1 className="text-3xl leading-tight sm:text-5xl">Sumate a nuestra base de talento</h1>
           <p className="mt-4 max-w-2xl text-primary-foreground/80">
-            Buscamos personas responsables y comprometidas para nuestros equipos de limpieza,
-            espacios verdes, fumigación y obras civiles.
+            Dejanos tus datos y tu CV. Cuando surja una búsqueda que encaje con tu perfil, te
+            contactamos.
           </p>
         </div>
       </div>

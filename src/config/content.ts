@@ -2,7 +2,9 @@ import limpiezaImg from "@/assets/serv-limpieza.jpg";
 import fumigacionImg from "@/assets/serv-fumigacion.jpg";
 import verdesImg from "@/assets/serv-verdes.jpg";
 import obrasImg from "@/assets/serv-obras.jpg";
-import trabajo1 from "@/assets/trabajo-1.jpg";
+import limpiezaEventos from "@/assets/trabajo-limpieza-eventos.jpg.asset.json";
+import limpiezaAuditorio from "@/assets/trabajo-limpieza-auditorio.jpg.asset.json";
+import fumigacionEstadio from "@/assets/trabajo-fumigacion-estadio.jpg.asset.json";
 
 /** Contenido editable: servicios, proceso, diferenciales y trabajos. */
 
@@ -21,7 +23,12 @@ export const servicios: Servicio[] = [
     titulo: "Limpieza integral",
     texto:
       "Espacios limpios y listos para operar, con servicios y frecuencias diseñados a medida de cada instalación.",
-    items: ["Oficinas y espacios comunes", "Áreas operativas", "Limpiezas periódicas", "Limpiezas especiales"],
+    items: [
+      "Oficinas y espacios comunes",
+      "Áreas operativas",
+      "Eventos deportivos y turísticos de gran convocatoria",
+      "Limpiezas periódicas y especiales",
+    ],
     cta: "Consultar por limpieza",
     imagen: limpiezaImg,
   },
@@ -77,29 +84,30 @@ export type Trabajo = {
   imagen: string;
 };
 
-/** Trabajos realizados — títulos genéricos hasta contar con material real.
- *  Reemplazar imagen, título, descripción y ubicación cuando existan. */
+/** Trabajos realizados — material real de servicios ejecutados. */
 export const trabajos: Trabajo[] = [
   {
     categoria: "Limpieza",
-    titulo: "Limpieza integral de instalaciones",
-    descripcion: "Servicio de limpieza en áreas operativas y espacios comunes de gran superficie.",
+    titulo: "Limpieza en eventos de gran convocatoria",
+    descripcion:
+      "Operativo de limpieza en accesos, plateas y sectores comunes durante un evento masivo.",
     ubicacion: null,
-    imagen: trabajo1,
+    imagen: limpiezaEventos.url,
   },
   {
     categoria: "Limpieza",
-    titulo: "Mantenimiento preventivo",
-    descripcion: "Rutinas periódicas de limpieza y orden en oficinas corporativas.",
+    titulo: "Limpieza de auditorio",
+    descripcion: "Acondicionamiento de butacas, pasillos y sala antes y después de cada función.",
     ubicacion: null,
-    imagen: limpiezaImg,
+    imagen: limpiezaAuditorio.url,
   },
   {
     categoria: "Fumigación",
-    titulo: "Intervención de control de plagas",
-    descripcion: "Tratamiento preventivo y correctivo en depósitos y sectores productivos.",
+    titulo: "Fumigación en predio deportivo",
+    descripcion:
+      "Tratamiento con equipos de aplicación en circulaciones, tribunas y sectores perimetrales.",
     ubicacion: null,
-    imagen: fumigacionImg,
+    imagen: fumigacionEstadio.url,
   },
   {
     categoria: "Espacios verdes",
@@ -110,16 +118,10 @@ export const trabajos: Trabajo[] = [
   },
   {
     categoria: "Obras civiles",
-    titulo: "Reparación y acondicionamiento edilicio",
+    titulo: "Mantenimiento y acondicionamiento edilicio",
     descripcion: "Trabajos de albañilería, pintura y adecuación de espacios internos.",
     ubicacion: null,
     imagen: obrasImg,
   },
 ];
 
-export const areasEmpleo = [
-  { titulo: "Limpieza", texto: "Operarios y operarias para servicios en empresas e instituciones." },
-  { titulo: "Jardinería y espacios verdes", texto: "Corte, poda, desmalezado y mantenimiento exterior." },
-  { titulo: "Fumigación", texto: "Aplicadores y personal para control de plagas." },
-  { titulo: "Obras civiles", texto: "Personal de oficio: albañilería, pintura, electricidad y plomería." },
-];
