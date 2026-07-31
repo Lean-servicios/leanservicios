@@ -1,18 +1,10 @@
 import industriaImg from "@/assets/industria.jpg";
 
 const capacidades = [
-  "Equipos operativos",
-  "Personal de oficio",
-  "Perfiles técnicos",
-  "Administración de obra",
-  "Higiene y Seguridad",
-  "Organización por turnos",
-  "Posibles esquemas de roster",
-  "Posibles servicios con campamento",
-  "Seguimiento documental",
-  "Entrega de EPP",
-  "Capacitaciones e inducciones cuando correspondan",
-  "Coordinación con responsables de operación",
+  "Equipos operativos y personal de oficio",
+  "Organización por turnos y roster",
+  "Higiene y Seguridad integrada",
+  "Entrega de EPP y capacitaciones",
 ];
 
 export function Industria() {
@@ -38,11 +30,6 @@ export function Industria() {
             <p>
               Lean adapta sus equipos, recursos y modalidades de trabajo a las características de
               cada operación, instalación y proyecto.
-            </p>
-            <p>
-              Analizamos las necesidades de personal, los turnos, las condiciones del servicio, los
-              requerimientos de seguridad y la coordinación con el cliente antes de iniciar cada
-              intervención.
             </p>
           </div>
         </div>

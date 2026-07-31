@@ -20,16 +20,8 @@ export const servicios: Servicio[] = [
     id: "limpieza",
     titulo: "Limpieza integral",
     texto:
-      "Cuidamos cada ambiente para que se mantenga limpio, ordenado y preparado para su actividad diaria. Diseñamos servicios adaptados a las características, frecuencia y necesidades de cada instalación.",
-    items: [
-      "Oficinas",
-      "Instalaciones empresariales",
-      "Áreas operativas",
-      "Espacios comunes",
-      "Limpiezas periódicas",
-      "Limpiezas especiales",
-      "Mantenimiento general",
-    ],
+      "Espacios limpios y listos para operar, con servicios y frecuencias diseñados a medida de cada instalación.",
+    items: ["Oficinas y espacios comunes", "Áreas operativas", "Limpiezas periódicas", "Limpiezas especiales"],
     cta: "Consultar por limpieza",
     imagen: limpiezaImg,
   },
@@ -37,14 +29,8 @@ export const servicios: Servicio[] = [
     id: "fumigacion",
     titulo: "Fumigación y control de plagas",
     texto:
-      "Protegemos los espacios frente a factores que pueden afectar su higiene, seguridad y funcionamiento, mediante intervenciones preventivas y correctivas adaptadas a cada establecimiento.",
-    items: [
-      "Fumigación",
-      "Desinsectación",
-      "Control preventivo de plagas",
-      "Tratamientos periódicos",
-      "Intervenciones específicas",
-    ],
+      "Intervenciones preventivas y correctivas que protegen la higiene y la continuidad operativa de cada establecimiento.",
+    items: ["Fumigación y desinsectación", "Control preventivo", "Tratamientos periódicos", "Intervenciones puntuales"],
     cta: "Consultar por fumigación",
     imagen: fumigacionImg,
   },
@@ -52,16 +38,8 @@ export const servicios: Servicio[] = [
     id: "espacios-verdes",
     titulo: "Jardinería y espacios verdes",
     texto:
-      "Cuidamos y conservamos los espacios exteriores para mantenerlos seguros, funcionales y en buenas condiciones.",
-    items: [
-      "Corte de césped",
-      "Desmalezado",
-      "Poda",
-      "Limpieza de espacios exteriores",
-      "Acondicionamiento de terrenos",
-      "Mantenimiento periódico",
-      "Conservación de áreas verdes",
-    ],
+      "Exteriores prolijos, seguros y en condiciones durante todo el año, con mantenimiento planificado.",
+    items: ["Corte y desmalezado", "Poda", "Acondicionamiento de terrenos", "Mantenimiento periódico"],
     cta: "Consultar por espacios verdes",
     imagen: verdesImg,
   },
@@ -69,44 +47,26 @@ export const servicios: Servicio[] = [
     id: "obras-civiles",
     titulo: "Obras civiles y mantenimiento edilicio",
     texto:
-      "Intervenimos allí donde los espacios necesitan repararse, adaptarse o evolucionar. Ejecutamos reparaciones, refacciones, mantenimiento edilicio y obras civiles de menor envergadura.",
-    items: [
-      "Albañilería",
-      "Pintura",
-      "Electricidad",
-      "Plomería",
-      "Reparaciones generales",
-      "Adecuaciones de espacios",
-      "Refacciones",
-      "Mantenimiento edilicio",
-      "Personal de oficio",
-      "Perfiles técnicos",
-      "Supervisión y coordinación de tareas",
-    ],
+      "Reparaciones, refacciones y adecuaciones edilicias ejecutadas con personal de oficio y supervisión propia.",
+    items: ["Albañilería y pintura", "Electricidad y plomería", "Adecuación de espacios", "Mantenimiento edilicio"],
     cta: "Consultar por obras civiles",
     imagen: obrasImg,
   },
 ];
 
 export const proceso = [
-  { n: "1", titulo: "Escuchamos", texto: "Conocemos el espacio, su dinámica y sus necesidades." },
-  { n: "2", titulo: "Relevamos", texto: "Identificamos qué requiere atención y cómo intervenir." },
-  { n: "3", titulo: "Planificamos", texto: "Organizamos personas, recursos, tareas y tiempos." },
-  { n: "4", titulo: "Actuamos", texto: "Ejecutamos cada servicio con seguimiento y responsabilidad." },
-  { n: "5", titulo: "Acompañamos", texto: "Porque las necesidades cambian y los espacios también." },
+  { n: "1", titulo: "Relevamos", texto: "Visitamos la instalación y detectamos qué necesita atención." },
+  { n: "2", titulo: "Planificamos", texto: "Definimos equipo, recursos, tareas y tiempos." },
+  { n: "3", titulo: "Ejecutamos", texto: "Trabajamos con supervisión y seguimiento continuo." },
 ];
 
 export const diferenciales = [
-  "Soluciones integrales",
+  "Un solo proveedor para cuatro servicios",
   "Un único punto de contacto",
-  "Servicios adaptados a cada instalación",
-  "Coordinación de personas y recursos",
+  "Servicios a medida de cada instalación",
   "Personal operativo, de oficio y técnico",
-  "Atención personalizada",
-  "Flexibilidad operativa",
-  "Seguimiento de los trabajos",
-  "Integración de Higiene y Seguridad",
-  "Compromiso con el funcionamiento cotidiano del cliente",
+  "Supervisión y seguimiento de cada trabajo",
+  "Respuesta rápida y flexibilidad operativa",
 ];
 
 export type Trabajo = {
@@ -159,9 +119,7 @@ export const trabajos: Trabajo[] = [
 
 export const areasEmpleo = [
   { titulo: "Limpieza", texto: "Operarios y operarias para servicios en empresas e instituciones." },
-  { titulo: "Jardinería y espacios verdes", texto: "Tareas de corte, poda, desmalezado y mantenimiento exterior." },
+  { titulo: "Jardinería y espacios verdes", texto: "Corte, poda, desmalezado y mantenimiento exterior." },
   { titulo: "Fumigación", texto: "Aplicadores y personal para control de plagas." },
   { titulo: "Obras civiles", texto: "Personal de oficio: albañilería, pintura, electricidad y plomería." },
-  { titulo: "Administración", texto: "Perfiles administrativos y de soporte operativo." },
-  { titulo: "Higiene y Seguridad", texto: "Perfiles técnicos vinculados a seguridad y cumplimiento." },
 ];
