@@ -23,7 +23,12 @@ export const servicios: Servicio[] = [
     titulo: "Limpieza integral",
     texto:
       "Espacios limpios y listos para operar, con servicios y frecuencias diseñados a medida de cada instalación.",
-    items: ["Oficinas y espacios comunes", "Áreas operativas", "Limpiezas periódicas", "Limpiezas especiales"],
+    items: [
+      "Oficinas y espacios comunes",
+      "Áreas operativas",
+      "Eventos deportivos y turísticos de gran convocatoria",
+      "Limpiezas periódicas y especiales",
+    ],
     cta: "Consultar por limpieza",
     imagen: limpiezaImg,
   },

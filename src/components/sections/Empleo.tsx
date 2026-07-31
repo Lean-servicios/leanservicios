@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { ExternalLink } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { areasEmpleo } from "@/config/content";
 import { siteConfig } from "@/config/site";
 
 export function Empleo({ compacto = false }: { compacto?: boolean }) {
@@ -13,27 +12,20 @@ export function Empleo({ compacto = false }: { compacto?: boolean }) {
       <div className="section-shell">
         <div className="max-w-2xl">
           <span className="eyebrow">Trabajá con nosotros</span>
-          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">Sumate al equipo de Lean</h2>
+          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
+            Sumate a nuestra base de talento
+          </h2>
           <p className="mt-4 text-muted-foreground">
-            Buscamos personas responsables y comprometidas para nuestros equipos de limpieza,
-            espacios verdes, fumigación y obras civiles.
+            Siempre estamos conociendo gente para sumar a nuestros equipos. Dejanos tus datos y tu
+            CV: cuando surja algo que encaje con tu perfil, te escribimos.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {areasEmpleo.map((a) => (
-            <article key={a.titulo} className="card-surface p-6">
-              <h3 className="text-lg">{a.titulo}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{a.texto}</p>
-            </article>
-          ))}
-        </div>
-
-        <div className="card-surface mt-12 p-6 sm:p-8">
+        <div className="card-surface mt-10 border-l-4 border-l-brand-lime p-6 sm:p-8">
           <p className="max-w-3xl text-muted-foreground">
-            Cargá tus datos y tu CV en el formulario. Nos comunicamos cuando haya una búsqueda acorde
-            a tu perfil.
+            Es un formulario corto: te toma menos de cinco minutos.
           </p>
+
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
             {formUrl ? (
