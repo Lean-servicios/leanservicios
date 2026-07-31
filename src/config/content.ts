@@ -14,6 +14,8 @@ export type Servicio = {
   texto: string;
   items: string[];
   cta: string;
+  /** Valor que se precarga en el cuestionario de contacto. */
+  servicioFormulario: string;
   imagen: string;
 };
 
@@ -22,41 +24,37 @@ export const servicios: Servicio[] = [
     id: "limpieza",
     titulo: "Limpieza integral",
     texto:
-      "Espacios limpios y listos para operar, con servicios y frecuencias diseñados a medida de cada instalación.",
-    items: [
-      "Oficinas y espacios comunes",
-      "Áreas operativas",
-      "Eventos deportivos y turísticos de gran convocatoria",
-      "Limpiezas periódicas y especiales",
-    ],
-    cta: "Consultar por limpieza",
+      "Espacios listos para operar, con frecuencias a medida. También cubrimos eventos deportivos y turísticos de gran convocatoria.",
+    items: ["Oficinas y áreas operativas", "Eventos masivos", "Limpiezas especiales"],
+    cta: "Pedir presupuesto de limpieza",
+    servicioFormulario: "Limpieza",
     imagen: limpiezaImg,
   },
   {
     id: "fumigacion",
     titulo: "Fumigación y control de plagas",
-    texto:
-      "Intervenciones preventivas y correctivas que protegen la higiene y la continuidad operativa de cada establecimiento.",
-    items: ["Fumigación y desinsectación", "Control preventivo", "Tratamientos periódicos", "Intervenciones puntuales"],
-    cta: "Consultar por fumigación",
+    texto: "Prevención y control que protegen la higiene y la continuidad operativa.",
+    items: ["Desinsectación", "Control preventivo", "Tratamientos periódicos"],
+    cta: "Pedir presupuesto de fumigación",
+    servicioFormulario: "Fumigación",
     imagen: fumigacionImg,
   },
   {
     id: "espacios-verdes",
     titulo: "Jardinería y espacios verdes",
-    texto:
-      "Exteriores prolijos, seguros y en condiciones durante todo el año, con mantenimiento planificado.",
-    items: ["Corte y desmalezado", "Poda", "Acondicionamiento de terrenos", "Mantenimiento periódico"],
-    cta: "Consultar por espacios verdes",
+    texto: "Exteriores prolijos y seguros todo el año, con mantenimiento planificado.",
+    items: ["Corte y desmalezado", "Poda", "Acondicionamiento de terrenos"],
+    cta: "Pedir presupuesto de espacios verdes",
+    servicioFormulario: "Espacios verdes",
     imagen: verdesImg,
   },
   {
     id: "obras-civiles",
     titulo: "Obras civiles y mantenimiento edilicio",
-    texto:
-      "Reparaciones, refacciones y adecuaciones edilicias ejecutadas con personal de oficio y supervisión propia.",
-    items: ["Albañilería y pintura", "Electricidad y plomería", "Adecuación de espacios", "Mantenimiento edilicio"],
-    cta: "Consultar por obras civiles",
+    texto: "Reparaciones y adecuaciones con personal de oficio y supervisión propia.",
+    items: ["Albañilería y pintura", "Electricidad y plomería", "Mantenimiento edilicio"],
+    cta: "Pedir presupuesto de obras",
+    servicioFormulario: "Obras civiles",
     imagen: obrasImg,
   },
 ];
