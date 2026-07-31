@@ -17,10 +17,10 @@ export function Trabajos() {
       <div className="section-shell">
         <div className="max-w-2xl">
           <span className="eyebrow">Trabajos realizados</span>
-          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">Tipos de intervenciones</h2>
+          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">Trabajos realizados</h2>
           <p className="mt-4 text-muted-foreground">
-            Galería de referencia por tipo de servicio. Las imágenes y descripciones se reemplazan
-            por material real de cada trabajo.
+            Operativos de limpieza, fumigación, espacios verdes y mantenimiento en instalaciones y
+            eventos de gran convocatoria.
           </p>
         </div>
 
