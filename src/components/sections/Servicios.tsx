@@ -5,7 +5,7 @@ import { servicios } from "@/config/content";
 
 export function Servicios() {
   return (
-    <section id="servicios" className="bg-surface py-20 sm:py-28">
+    <section id="servicios" className="bg-surface py-14 sm:py-20">
       <div className="section-shell">
         <div className="max-w-2xl">
           <span className="eyebrow">Servicios</span>

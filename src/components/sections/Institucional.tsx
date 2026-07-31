@@ -5,7 +5,7 @@ export function Institucional() {
   const { institucional } = siteConfig;
 
   return (
-    <section id="nosotros" className="bg-background py-20 sm:py-28">
+    <section id="nosotros" className="bg-background py-14 sm:py-20">
       <div className="section-shell grid items-center gap-12 lg:grid-cols-2">
         <div>
           <span className="eyebrow">Nosotros</span>

@@ -2,7 +2,7 @@ import { proceso } from "@/config/content";
 
 export function ComoTrabajamos() {
   return (
-    <section id="como-trabajamos" className="gradient-brand py-20 text-primary-foreground sm:py-28">
+    <section id="como-trabajamos" className="gradient-brand py-12 text-primary-foreground sm:py-14">
       <div className="section-shell">
         <div className="max-w-2xl">
           <span className="eyebrow text-primary-foreground/70">Cómo trabajamos</span>
