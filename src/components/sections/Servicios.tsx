@@ -1,8 +1,4 @@
-import { ArrowRight } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
 import { servicios } from "@/config/content";
-import { irAlCuestionario } from "@/lib/servicio-cta";
 
 export function Servicios() {
   return (
@@ -15,14 +11,6 @@ export function Servicios() {
               Cuatro servicios, un solo proveedor
             </h2>
           </div>
-          <Button
-            variant="outline"
-            className="hidden sm:inline-flex"
-            onClick={() => irAlCuestionario("Varios servicios")}
-          >
-            Necesito varios servicios
-            <ArrowRight className="size-4" aria-hidden />
-          </Button>
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -55,15 +43,6 @@ export function Servicios() {
                     </li>
                   ))}
                 </ul>
-
-                <Button
-                  variant="accent"
-                  className="mt-6 self-start"
-                  onClick={() => irAlCuestionario(s.servicioFormulario)}
-                >
-                  {s.cta}
-                  <ArrowRight className="size-4" aria-hidden />
-                </Button>
               </div>
             </article>
           ))}

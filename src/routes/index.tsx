@@ -8,7 +8,6 @@ import { ComoTrabajamos } from "@/components/sections/ComoTrabajamos";
 import { Industria } from "@/components/sections/Industria";
 import { Trabajos } from "@/components/sections/Trabajos";
 import { Empleo } from "@/components/sections/Empleo";
-import { LlamadoComercial } from "@/components/sections/LlamadoComercial";
 import { Contacto } from "@/components/sections/Contacto";
 
 const titulo = "Lean Service | Limpieza, Fumigación, Espacios Verdes y Obras Civiles";
@@ -66,7 +65,6 @@ function Home() {
       <Industria />
       <Trabajos />
       <Empleo />
-      <LlamadoComercial />
       <Contacto />
     </SiteLayout>
   );

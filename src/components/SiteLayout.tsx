@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { FloatingCta } from "@/components/FloatingCta";
 
 export function SiteLayout({ children, solidHeader }: { children: ReactNode; solidHeader?: boolean }) {
   return (
@@ -10,7 +10,7 @@ export function SiteLayout({ children, solidHeader }: { children: ReactNode; sol
       <Header solid={solidHeader ?? false} />
       <main>{children}</main>
       <Footer />
-      <WhatsAppFloat />
+      <FloatingCta />
     </div>
   );
 }
