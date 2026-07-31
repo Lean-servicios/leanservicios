@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useServerFn } from "@tanstack/react-start";
@@ -7,6 +7,7 @@ import { CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { contactSchema, enviarConsulta, type ContactInput } from "@/lib/contacto.functions";
+import { SERVICIO_EVENT, servicioDesdeUrl } from "@/lib/servicio-cta";
 
 const servicios = [
   "Limpieza",
@@ -29,11 +30,31 @@ export function ContactForm() {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm<ContactInput>({
     resolver: zodResolver(contactSchema),
     defaultValues: { servicio: "Limpieza" },
   });
+
+  // Precarga el servicio elegido desde los CTA de cada servicio (o desde ?servicio=).
+  useEffect(() => {
+    const esValido = (v: string | null): v is ContactInput["servicio"] =>
+      Boolean(v) && (servicios as readonly string[]).includes(v as string);
+
+    const inicial = servicioDesdeUrl();
+    if (esValido(inicial)) setValue("servicio", inicial);
+
+    const onCta = (e: Event) => {
+      const v = (e as CustomEvent<string>).detail;
+      if (esValido(v)) {
+        setValue("servicio", v);
+        setEstado("idle");
+      }
+    };
+    window.addEventListener(SERVICIO_EVENT, onCta);
+    return () => window.removeEventListener(SERVICIO_EVENT, onCta);
+  }, [setValue]);
 
   const onSubmit = async (values: ContactInput) => {
     setErrorMsg(null);
