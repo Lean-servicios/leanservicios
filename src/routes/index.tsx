@@ -5,7 +5,6 @@ import { Hero } from "@/components/sections/Hero";
 import { Institucional } from "@/components/sections/Institucional";
 import { Servicios } from "@/components/sections/Servicios";
 import { ComoTrabajamos } from "@/components/sections/ComoTrabajamos";
-import { PorQueLean } from "@/components/sections/PorQueLean";
 import { Industria } from "@/components/sections/Industria";
 import { Trabajos } from "@/components/sections/Trabajos";
 import { Empleo } from "@/components/sections/Empleo";
@@ -64,7 +63,6 @@ function Home() {
       <Institucional />
       <Servicios />
       <ComoTrabajamos />
-      <PorQueLean />
       <Industria />
       <Trabajos />
       <Empleo />

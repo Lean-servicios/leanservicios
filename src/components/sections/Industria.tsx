@@ -9,7 +9,7 @@ const capacidades = [
 
 export function Industria() {
   return (
-    <section className="relative isolate overflow-hidden py-20 sm:py-28">
+    <section className="relative isolate overflow-hidden py-14 sm:py-20">
       <img
         src={industriaImg}
         alt="Personal con elementos de protección en un proyecto industrial"

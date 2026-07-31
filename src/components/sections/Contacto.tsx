@@ -12,7 +12,7 @@ export function Contacto() {
   ].filter((d) => Boolean(d.valor));
 
   return (
-    <section id="contacto" className="bg-background py-20 sm:py-28">
+    <section id="contacto" className="bg-background py-14 sm:py-20">
       <div className="section-shell grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
         <div>
           <span className="eyebrow">Contacto</span>

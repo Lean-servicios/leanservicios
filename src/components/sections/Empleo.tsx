@@ -8,7 +8,7 @@ export function Empleo({ compacto = false }: { compacto?: boolean }) {
   const formUrl = siteConfig.airtablePostulantesFormUrl;
 
   return (
-    <section id="empleo" className="bg-surface py-20 sm:py-28">
+    <section id="empleo" className="bg-surface py-14 sm:py-20">
       <div className="section-shell">
         <div className="max-w-2xl">
           <span className="eyebrow">Trabajá con nosotros</span>

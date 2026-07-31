@@ -1,28 +1,30 @@
+import { ArrowRight } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 import { proceso } from "@/config/content";
 
 export function ComoTrabajamos() {
   return (
-    <section id="como-trabajamos" className="gradient-brand py-20 text-primary-foreground sm:py-28">
-      <div className="section-shell">
-        <div className="max-w-2xl">
-          <span className="eyebrow text-primary-foreground/70">Cómo trabajamos</span>
-          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
-            Un método simple, ordenado y verificable
-          </h2>
-        </div>
-
-        <ol className="mt-12 grid gap-6 md:grid-cols-3 lg:grid-cols-5">
+    <section id="como-trabajamos" className="gradient-brand py-12 text-primary-foreground sm:py-14">
+      <div className="section-shell grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+        <ol className="grid gap-6 sm:grid-cols-3">
           {proceso.map((paso) => (
-            <li
-              key={paso.n}
-              className="relative rounded-xl border border-primary-foreground/15 bg-primary-foreground/5 p-6 transition-colors hover:bg-primary-foreground/10"
-            >
-              <span className="text-3xl font-bold text-accent">{paso.n}</span>
-              <h3 className="mt-3 text-lg">{paso.titulo}</h3>
-              <p className="mt-2 text-sm text-primary-foreground/75">{paso.texto}</p>
+            <li key={paso.n} className="flex items-start gap-3">
+              <span className="text-2xl font-bold text-accent">{paso.n}</span>
+              <div>
+                <h3 className="text-base leading-tight">{paso.titulo}</h3>
+                <p className="mt-1 text-sm text-primary-foreground/75">{paso.texto}</p>
+              </div>
             </li>
           ))}
         </ol>
+
+        <Button asChild variant="hero" size="lg" className="justify-self-start">
+          <a href="#contacto">
+            Pedir una visita
+            <ArrowRight className="size-4" aria-hidden />
+          </a>
+        </Button>
       </div>
     </section>
   );

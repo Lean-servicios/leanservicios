@@ -7,7 +7,7 @@ const pilares = ["Limpieza", "Fumigación", "Espacios verdes", "Obras civiles"];
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative isolate flex min-h-[92vh] items-center overflow-hidden">
+    <section id="inicio" className="relative isolate flex min-h-[76vh] items-center overflow-hidden">
       <img
         src={heroImg}
         alt="Equipo de Lean Service trabajando en una instalación industrial"
@@ -18,7 +18,7 @@ export function Hero() {
       />
       <div className="hero-overlay absolute inset-0 -z-10" aria-hidden />
 
-      <div className="section-shell py-28 text-primary-foreground sm:py-32">
+      <div className="section-shell py-20 text-primary-foreground sm:py-24">
         <div className="max-w-3xl animate-rise">
           <img
             src={logoBlanco.url}
@@ -28,16 +28,16 @@ export function Hero() {
             height={160}
           />
 
-          <h1 className="mt-8 text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
+          <h1 className="mt-6 text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
             Cuidamos el pulso de cada espacio.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base text-primary-foreground/85 sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base text-primary-foreground/85 sm:text-lg">
             Soluciones integrales de limpieza, fumigación, espacios verdes y obras civiles para
             acompañar el funcionamiento, mantenimiento y evolución de tus instalaciones.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Button asChild variant="hero" size="lg">
               <a href="#contacto">Solicitar presupuesto</a>
             </Button>
@@ -46,7 +46,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <p className="mt-10 text-xs font-semibold tracking-[0.14em] uppercase text-primary-foreground/70">
+          <p className="mt-8 text-xs font-semibold tracking-[0.14em] uppercase text-primary-foreground/70">
             {siteConfig.fraseComercial}
           </p>
         </div>

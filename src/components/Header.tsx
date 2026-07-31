@@ -13,7 +13,6 @@ const nav = [
   { label: "Nosotros", href: "/#nosotros" },
   { label: "Cómo trabajamos", href: "/#como-trabajamos" },
   { label: "Trabajos realizados", href: "/#trabajos" },
-  { label: "Por qué Lean", href: "/#por-que-lean" },
   { label: "Trabajá con nosotros", href: "/#empleo" },
   { label: "Contacto", href: "/#contacto" },
 ];

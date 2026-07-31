@@ -13,7 +13,7 @@ export function Trabajos() {
   const visibles = filtro === "Todos" ? trabajos : trabajos.filter((t) => t.categoria === filtro);
 
   return (
-    <section id="trabajos" className="bg-background py-20 sm:py-28">
+    <section id="trabajos" className="bg-background py-14 sm:py-20">
       <div className="section-shell">
         <div className="max-w-2xl">
           <span className="eyebrow">Trabajos realizados</span>
