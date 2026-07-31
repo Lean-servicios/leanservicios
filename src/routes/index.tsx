@@ -4,7 +4,6 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Hero } from "@/components/sections/Hero";
 import { Institucional } from "@/components/sections/Institucional";
 import { Servicios } from "@/components/sections/Servicios";
-import { MiradaIntegral } from "@/components/sections/MiradaIntegral";
 import { ComoTrabajamos } from "@/components/sections/ComoTrabajamos";
 import { PorQueLean } from "@/components/sections/PorQueLean";
 import { Industria } from "@/components/sections/Industria";
@@ -64,7 +63,6 @@ function Home() {
       <Hero />
       <Institucional />
       <Servicios />
-      <MiradaIntegral />
       <ComoTrabajamos />
       <PorQueLean />
       <Industria />

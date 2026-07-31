@@ -14,13 +14,8 @@ export function Institucional() {
           </h2>
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p>
-              Brindamos soluciones integrales de limpieza, fumigación, mantenimiento de espacios
-              verdes y obras civiles, acompañando a empresas e instituciones en el cuidado,
-              mantenimiento y mejora de sus instalaciones.
-            </p>
-            <p>
-              Porque cada espacio tiene su propio ritmo, sus propias necesidades y una actividad que
-              no puede detenerse.
+              Limpieza, fumigación, espacios verdes y obras civiles con un solo proveedor: menos
+              proveedores, menos coordinación y una operación que no se detiene.
             </p>
             <p className="text-lg font-semibold text-foreground">
               En Lean trabajamos para que ese pulso se mantenga.
@@ -88,9 +83,6 @@ export function Institucional() {
             width={1280}
             height={960}
           />
-          <figcaption className="mt-3 text-xs text-muted-foreground">
-            Imagen temporal de referencia — reemplazable por fotografías reales del equipo Lean.
-          </figcaption>
         </figure>
       </div>
     </section>

@@ -15,9 +15,8 @@ export function Empleo({ compacto = false }: { compacto?: boolean }) {
           <span className="eyebrow">Trabajá con nosotros</span>
           <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">Sumate al equipo de Lean</h2>
           <p className="mt-4 text-muted-foreground">
-            Buscamos personas responsables, comprometidas y con ganas de desarrollarse en equipos
-            vinculados a servicios, mantenimiento, infraestructura, administración e Higiene y
-            Seguridad.
+            Buscamos personas responsables y comprometidas para nuestros equipos de limpieza,
+            espacios verdes, fumigación y obras civiles.
           </p>
         </div>
 
@@ -32,8 +31,8 @@ export function Empleo({ compacto = false }: { compacto?: boolean }) {
 
         <div className="card-surface mt-12 p-6 sm:p-8">
           <p className="max-w-3xl text-muted-foreground">
-            Completá el formulario con tus datos, experiencia y disponibilidad. Nuestro equipo de
-            Recursos Humanos revisará tu perfil y se comunicará cuando exista una oportunidad acorde.
+            Cargá tus datos y tu CV en el formulario. Nos comunicamos cuando haya una búsqueda acorde
+            a tu perfil.
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">

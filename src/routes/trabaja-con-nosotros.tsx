@@ -5,7 +5,7 @@ import { Empleo } from "@/components/sections/Empleo";
 
 const titulo = "Trabajá con nosotros | Lean Service";
 const descripcion =
-  "Sumate al equipo de Lean Service: búsquedas en limpieza, espacios verdes, fumigación, obras civiles, administración e Higiene y Seguridad.";
+  "Sumate al equipo de Lean Service: búsquedas en limpieza, espacios verdes, fumigación y obras civiles. Cargá tu CV en el formulario.";
 
 export const Route = createFileRoute("/trabaja-con-nosotros")({
   head: () => ({
@@ -29,9 +29,8 @@ function TrabajaConNosotros() {
         <div className="section-shell">
           <h1 className="text-3xl leading-tight sm:text-5xl">Sumate al equipo de Lean</h1>
           <p className="mt-4 max-w-2xl text-primary-foreground/80">
-            Buscamos personas responsables, comprometidas y con ganas de desarrollarse en equipos
-            vinculados a servicios, mantenimiento, infraestructura, administración e Higiene y
-            Seguridad.
+            Buscamos personas responsables y comprometidas para nuestros equipos de limpieza,
+            espacios verdes, fumigación y obras civiles.
           </p>
         </div>
       </div>

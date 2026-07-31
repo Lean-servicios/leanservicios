@@ -48,7 +48,8 @@ export const siteConfig = {
   /** Formulario público de Airtable para postulaciones laborales.
    *  Variable de entorno: VITE_AIRTABLE_POSTULANTES_FORM_URL
    *  Se usa exclusivamente para recibir postulaciones. */
-  airtablePostulantesFormUrl: env['VITE_AIRTABLE_POSTULANTES_FORM_URL'] ?? null,
+  airtablePostulantesFormUrl: env['VITE_AIRTABLE_POSTULANTES_FORM_URL'] ??
+    'https://airtable.com/appCWP95kNNFovHwu/pagwtHDXIQAZBC3dH/form',
 };
 
 /** Enlace de WhatsApp listo para usar (null si el número no está configurado). */
