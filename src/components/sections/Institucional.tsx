@@ -1,4 +1,7 @@
+import { Check } from "lucide-react";
+
 import institucionalImg from "@/assets/institucional.jpg";
+import { diferenciales } from "@/config/content";
 import { siteConfig } from "@/config/site";
 
 export function Institucional() {
@@ -9,18 +12,23 @@ export function Institucional() {
       <div className="section-shell grid items-center gap-12 lg:grid-cols-2">
         <div>
           <span className="eyebrow">Nosotros</span>
-          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
-            Soluciones que acompañan el funcionamiento de tus instalaciones
+          <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
+            Un solo proveedor para el cuidado de tus instalaciones
           </h2>
-          <div className="mt-6 space-y-4 text-muted-foreground">
-            <p>
-              Limpieza, fumigación, espacios verdes y obras civiles con un solo proveedor: menos
-              proveedores, menos coordinación y una operación que no se detiene.
-            </p>
-            <p className="text-lg font-semibold text-foreground">
-              En Lean trabajamos para que ese pulso se mantenga.
-            </p>
-          </div>
+          <p className="mt-4 text-muted-foreground">
+            Limpieza, fumigación, espacios verdes y obras civiles con una misma coordinación: menos
+            proveedores y una operación que no se detiene.
+          </p>
+
+          <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+            {diferenciales.map((d) => (
+              <li key={d} className="flex items-start gap-2 text-sm">
+                <Check className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden />
+                <span>{d}</span>
+              </li>
+            ))}
+          </ul>
+
 
           {/* Datos institucionales: se muestran únicamente cuando están cargados
               en src/config/site.ts con información real. */}
