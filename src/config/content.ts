@@ -1,4 +1,4 @@
-import limpiezaImg from "@/assets/serv-limpieza.jpg";
+import limpiezaImg from "@/assets/serv-limpieza-institucional.jpg.asset.json";
 import fumigacionImg from "@/assets/serv-fumigacion.jpg";
 import verdesImg from "@/assets/serv-verdes.jpg";
 import obrasImg from "@/assets/serv-obras.jpg";
@@ -17,6 +17,8 @@ export type Servicio = {
   /** Valor que se precarga en el cuestionario de contacto. */
   servicioFormulario: string;
   imagen: string;
+  /** Encuadre del recorte en las tarjetas. */
+  foco?: string;
 };
 
 export const servicios: Servicio[] = [
@@ -28,7 +30,8 @@ export const servicios: Servicio[] = [
     items: ["Oficinas y áreas operativas", "Eventos masivos", "Limpiezas especiales"],
     cta: "Pedir presupuesto de limpieza",
     servicioFormulario: "Limpieza",
-    imagen: limpiezaImg,
+    imagen: limpiezaImg.url,
+    foco: "center 22%",
   },
   {
     id: "fumigacion",
@@ -80,6 +83,8 @@ export type Trabajo = {
   descripcion: string;
   ubicacion?: string | null;
   imagen: string;
+  /** Encuadre del recorte en la galería. */
+  foco?: string;
 };
 
 /** Trabajos realizados — material real de servicios ejecutados. */
@@ -91,6 +96,7 @@ export const trabajos: Trabajo[] = [
       "Operativo de limpieza en accesos, plateas y sectores comunes durante un evento masivo.",
     ubicacion: null,
     imagen: limpiezaEventos.url,
+    foco: "center 35%",
   },
   {
     categoria: "Limpieza",
@@ -98,6 +104,7 @@ export const trabajos: Trabajo[] = [
     descripcion: "Acondicionamiento de butacas, pasillos y sala antes y después de cada función.",
     ubicacion: null,
     imagen: limpiezaAuditorio.url,
+    foco: "center 40%",
   },
   {
     categoria: "Fumigación",
@@ -106,6 +113,7 @@ export const trabajos: Trabajo[] = [
       "Tratamiento con equipos de aplicación en circulaciones, tribunas y sectores perimetrales.",
     ubicacion: null,
     imagen: fumigacionEstadio.url,
+    foco: "center 45%",
   },
   {
     categoria: "Espacios verdes",
