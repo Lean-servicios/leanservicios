@@ -95,7 +95,10 @@
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 16%);
   --ring: oklch(0.6 0.18 265);
+  --brand-lime: oklch(0.82 0.18 120);
+  --brand-lime-foreground: oklch(0.2 0.05 130);
 }
+
 
 @layer base {
   * {
