@@ -56,6 +56,7 @@ export function Trabajos() {
                 src={t.imagen}
                 alt={t.titulo}
                 className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                style={{ objectPosition: t.foco ?? "center" }}
                 loading="lazy"
                 width={1200}
                 height={900}
@@ -101,7 +102,7 @@ export function Trabajos() {
                 <X className="size-5" />
               </button>
             </div>
-            <img src={activo.imagen} alt={activo.titulo} className="w-full object-cover" />
+            <img src={activo.imagen} alt={activo.titulo} className="max-h-[75vh] w-full object-contain" />
             <p className="p-5 text-sm text-muted-foreground">{activo.descripcion}</p>
           </div>
         </div>
