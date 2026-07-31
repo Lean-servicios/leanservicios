@@ -36,6 +36,7 @@ export function Servicios() {
                 src={s.imagen}
                 alt={s.titulo}
                 className="h-40 w-full object-cover"
+                style={{ objectPosition: s.foco ?? "center" }}
                 loading="lazy"
                 width={1200}
                 height={900}
