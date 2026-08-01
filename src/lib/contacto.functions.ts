@@ -15,11 +15,11 @@ import { z } from "zod";
 
 export const contactSchema = z.object({
   nombre: z.string().trim().min(2, "Ingresá tu nombre y apellido").max(120),
-  empresa: z.string().trim().min(2, "Ingresá el nombre de la empresa").max(120),
-  cargo: z.string().trim().max(120).optional().or(z.literal("")),
-  telefono: z.string().trim().min(6, "Ingresá un teléfono válido").max(40),
   email: z.string().trim().email("Ingresá un email válido").max(180),
-  localidad: z.string().trim().min(2, "Ingresá la localidad").max(120),
+  telefono: z.string().trim().max(40).optional().or(z.literal("")),
+  empresa: z.string().trim().max(120).optional().or(z.literal("")),
+  cargo: z.string().trim().max(120).optional().or(z.literal("")),
+  localidad: z.string().trim().max(120).optional().or(z.literal("")),
   servicio: z.enum([
     "Limpieza",
     "Fumigación",
@@ -28,8 +28,8 @@ export const contactSchema = z.object({
     "Varios servicios",
     "Otro",
   ]),
-  ubicacionServicio: z.string().trim().min(2, "Indicá dónde se realizaría el servicio").max(180),
-  mensaje: z.string().trim().min(10, "Contanos brevemente qué necesitás").max(2000),
+  ubicacionServicio: z.string().trim().max(180).optional().or(z.literal("")),
+  mensaje: z.string().trim().min(5, "Contanos brevemente qué necesitás").max(2000),
   privacidad: z.literal(true, { errorMap: () => ({ message: "Debés aceptar la política de privacidad" }) }),
   /** Campo trampa anti-spam: debe llegar vacío. */
   honeypot: z.string().max(0).optional().or(z.literal("")),
@@ -48,13 +48,13 @@ export const enviarConsulta = createServerFn({ method: "POST" })
 
     const cuerpo = [
       `Nombre: ${data.nombre}`,
-      `Empresa: ${data.empresa}`,
-      data.cargo ? `Cargo: ${data.cargo}` : null,
-      `Teléfono: ${data.telefono}`,
       `Email: ${data.email}`,
-      `Localidad: ${data.localidad}`,
+      data.telefono ? `Teléfono: ${data.telefono}` : null,
+      data.empresa ? `Empresa: ${data.empresa}` : null,
+      data.cargo ? `Cargo: ${data.cargo}` : null,
+      data.localidad ? `Localidad: ${data.localidad}` : null,
       `Servicio de interés: ${data.servicio}`,
-      `Ubicación del servicio: ${data.ubicacionServicio}`,
+      data.ubicacionServicio ? `Ubicación del servicio: ${data.ubicacionServicio}` : null,
       "",
       data.mensaje,
     ]

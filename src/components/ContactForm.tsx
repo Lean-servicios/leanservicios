@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useServerFn } from "@tanstack/react-start";
 import { Link } from "@tanstack/react-router";
-import { CheckCircle2, Loader2, AlertCircle } from "lucide-react";
+import { CheckCircle2, Loader2, AlertCircle, ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { contactSchema, enviarConsulta, type ContactInput } from "@/lib/contacto.functions";
@@ -21,10 +21,13 @@ const servicios = [
 const fieldClass =
   "w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm text-foreground shadow-sm transition-colors placeholder:text-muted-foreground/70 focus-visible:border-ring focus-visible:outline-none";
 
+const optionalLabel = " (opcional)";
+
 export function ContactForm() {
   const enviar = useServerFn(enviarConsulta);
   const [estado, setEstado] = useState<"idle" | "enviado" | "pendiente" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [mostrarExtras, setMostrarExtras] = useState(false);
 
   const {
     register,
@@ -105,83 +108,104 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="card-surface p-6 sm:p-8">
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div className="sm:col-span-2">
-          <label htmlFor="nombre" className="text-sm font-medium">
-            Nombre y apellido *
-          </label>
-          <input id="nombre" className={fieldClass} autoComplete="name" {...register("nombre")} />
-          <Error_ name="nombre" />
+      <div className="grid gap-5">
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label htmlFor="nombre" className="text-sm font-medium">
+              Nombre y apellido *
+            </label>
+            <input id="nombre" className={fieldClass} autoComplete="name" {...register("nombre")} />
+            <Error_ name="nombre" />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="text-sm font-medium">
+              Email *
+            </label>
+            <input id="email" className={fieldClass} inputMode="email" autoComplete="email" {...register("email")} />
+            <Error_ name="email" />
+          </div>
+
+          <div>
+            <label htmlFor="servicio" className="text-sm font-medium">
+              Servicio de interés *
+            </label>
+            <select id="servicio" className={fieldClass} {...register("servicio")}>
+              {servicios.map((s) => (
+                <option key={s} value={s}>
+                  {s}
+                </option>
+              ))}
+            </select>
+            <Error_ name="servicio" />
+          </div>
+
+          <div>
+            <label htmlFor="telefono" className="text-sm font-medium">
+              Teléfono<span className="text-muted-foreground">{optionalLabel}</span>
+            </label>
+            <input id="telefono" className={fieldClass} inputMode="tel" autoComplete="tel" {...register("telefono")} />
+            <Error_ name="telefono" />
+          </div>
         </div>
 
         <div>
-          <label htmlFor="empresa" className="text-sm font-medium">
-            Empresa *
-          </label>
-          <input id="empresa" className={fieldClass} autoComplete="organization" {...register("empresa")} />
-          <Error_ name="empresa" />
-        </div>
-
-        <div>
-          <label htmlFor="cargo" className="text-sm font-medium">
-            Cargo <span className="text-muted-foreground">(opcional)</span>
-          </label>
-          <input id="cargo" className={fieldClass} {...register("cargo")} />
-        </div>
-
-        <div>
-          <label htmlFor="telefono" className="text-sm font-medium">
-            Teléfono *
-          </label>
-          <input id="telefono" className={fieldClass} inputMode="tel" autoComplete="tel" {...register("telefono")} />
-          <Error_ name="telefono" />
-        </div>
-
-        <div>
-          <label htmlFor="email" className="text-sm font-medium">
-            Email *
-          </label>
-          <input id="email" className={fieldClass} inputMode="email" autoComplete="email" {...register("email")} />
-          <Error_ name="email" />
-        </div>
-
-        <div>
-          <label htmlFor="localidad" className="text-sm font-medium">
-            Localidad *
-          </label>
-          <input id="localidad" className={fieldClass} {...register("localidad")} />
-          <Error_ name="localidad" />
-        </div>
-
-        <div>
-          <label htmlFor="servicio" className="text-sm font-medium">
-            Servicio de interés *
-          </label>
-          <select id="servicio" className={fieldClass} {...register("servicio")}>
-            {servicios.map((s) => (
-              <option key={s} value={s}>
-                {s}
-              </option>
-            ))}
-          </select>
-          <Error_ name="servicio" />
-        </div>
-
-        <div className="sm:col-span-2">
-          <label htmlFor="ubicacionServicio" className="text-sm font-medium">
-            Ubicación del servicio *
-          </label>
-          <input id="ubicacionServicio" className={fieldClass} {...register("ubicacionServicio")} />
-          <Error_ name="ubicacionServicio" />
-        </div>
-
-        <div className="sm:col-span-2">
           <label htmlFor="mensaje" className="text-sm font-medium">
-            Mensaje *
+            Contanos qué necesitás *
           </label>
-          <textarea id="mensaje" rows={5} className={fieldClass} {...register("mensaje")} />
+          <textarea id="mensaje" rows={4} className={fieldClass} {...register("mensaje")} placeholder="Breve descripción del servicio o instalación." />
           <Error_ name="mensaje" />
         </div>
+
+        {/* Campos opcionales colapsables */}
+        <button
+          type="button"
+          onClick={() => setMostrarExtras((v) => !v)}
+          className="flex items-center gap-1.5 self-start text-sm font-medium text-primary hover:underline underline-offset-4"
+          aria-expanded={mostrarExtras}
+        >
+          <ChevronDown
+            className={`size-4 transition-transform ${mostrarExtras ? "rotate-180" : ""}`}
+            aria-hidden
+          />
+          Agregar más datos {mostrarExtras ? "" : "(opcional)"}
+        </button>
+
+        {mostrarExtras && (
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label htmlFor="empresa" className="text-sm font-medium">
+                Empresa<span className="text-muted-foreground">{optionalLabel}</span>
+              </label>
+              <input id="empresa" className={fieldClass} autoComplete="organization" {...register("empresa")} />
+              <Error_ name="empresa" />
+            </div>
+
+            <div>
+              <label htmlFor="cargo" className="text-sm font-medium">
+                Cargo<span className="text-muted-foreground">{optionalLabel}</span>
+              </label>
+              <input id="cargo" className={fieldClass} {...register("cargo")} />
+              <Error_ name="cargo" />
+            </div>
+
+            <div>
+              <label htmlFor="localidad" className="text-sm font-medium">
+                Localidad<span className="text-muted-foreground">{optionalLabel}</span>
+              </label>
+              <input id="localidad" className={fieldClass} {...register("localidad")} />
+              <Error_ name="localidad" />
+            </div>
+
+            <div>
+              <label htmlFor="ubicacionServicio" className="text-sm font-medium">
+                Ubicación del servicio<span className="text-muted-foreground">{optionalLabel}</span>
+              </label>
+              <input id="ubicacionServicio" className={fieldClass} {...register("ubicacionServicio")} />
+              <Error_ name="ubicacionServicio" />
+            </div>
+          </div>
+        )}
 
         {/* Campo anti-spam: oculto para personas, visible para bots */}
         <input
@@ -193,7 +217,7 @@ export function ContactForm() {
           {...register("honeypot")}
         />
 
-        <div className="sm:col-span-2">
+        <div>
           <label className="flex items-start gap-3 text-sm">
             <input
               type="checkbox"
