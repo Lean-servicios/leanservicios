@@ -15,9 +15,10 @@ export const Route = createFileRoute("/politica-de-privacidad")({
       { property: "og:title", content: titulo },
       { property: "og:description", content: descripcion },
       { property: "og:type", content: "article" },
+      { property: "og:url", content: "https://leanservicios.lovable.app/politica-de-privacidad" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/politica-de-privacidad" }],
+    links: [{ rel: "canonical", href: "https://leanservicios.lovable.app/politica-de-privacidad" }],
   }),
   component: Privacidad,
 });

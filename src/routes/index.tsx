@@ -22,16 +22,17 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: titulo },
       { property: "og:description", content: descripcion },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://leanservicios.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://leanservicios.lovable.app/" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "LEAN Servicios Integrales S.A.S.",
+          name: "LEAN - Servicios Integrales",
           alternateName: "Lean Service",
           slogan: "Cuidamos el pulso de cada espacio.",
           description: descripcion,

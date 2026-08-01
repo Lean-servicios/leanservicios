@@ -15,9 +15,10 @@ export const Route = createFileRoute("/trabaja-con-nosotros")({
       { property: "og:title", content: titulo },
       { property: "og:description", content: descripcion },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://leanservicios.lovable.app/trabaja-con-nosotros" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/trabaja-con-nosotros" }],
+    links: [{ rel: "canonical", href: "https://leanservicios.lovable.app/trabaja-con-nosotros" }],
   }),
   component: TrabajaConNosotros,
 });

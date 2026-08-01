@@ -42,7 +42,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
         <a href="/#inicio" className="flex min-w-0 items-center" aria-label="LEAN SERVICE — Inicio">
           <img
             src={isSolid ? logoColor.url : logoBlanco.url}
-            alt="LEAN Servicios Integrales S.A.S."
+            alt="LEAN - Servicios Integrales"
             className="h-16 w-auto sm:h-20"
             width={480}
             height={140}

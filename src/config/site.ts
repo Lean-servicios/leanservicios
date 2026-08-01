@@ -15,7 +15,7 @@ const env = import.meta.env as Record<string, string | undefined>;
 
 export const siteConfig = {
   nombre: "LEAN SERVICE",
-  razonSocial: "LEAN Servicios Integrales S.A.S.",
+  razonSocial: "LEAN - Servicios Integrales",
   slogan: "Cuidamos el pulso de cada espacio.",
   fraseComercial: "Un solo proveedor. Múltiples soluciones.",
 
