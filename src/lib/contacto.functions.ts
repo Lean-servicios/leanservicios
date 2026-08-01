@@ -48,13 +48,13 @@ export const enviarConsulta = createServerFn({ method: "POST" })
 
     const cuerpo = [
       `Nombre: ${data.nombre}`,
-      `Empresa: ${data.empresa}`,
-      data.cargo ? `Cargo: ${data.cargo}` : null,
-      `Teléfono: ${data.telefono}`,
       `Email: ${data.email}`,
-      `Localidad: ${data.localidad}`,
+      data.telefono ? `Teléfono: ${data.telefono}` : null,
+      data.empresa ? `Empresa: ${data.empresa}` : null,
+      data.cargo ? `Cargo: ${data.cargo}` : null,
+      data.localidad ? `Localidad: ${data.localidad}` : null,
       `Servicio de interés: ${data.servicio}`,
-      `Ubicación del servicio: ${data.ubicacionServicio}`,
+      data.ubicacionServicio ? `Ubicación del servicio: ${data.ubicacionServicio}` : null,
       "",
       data.mensaje,
     ]
