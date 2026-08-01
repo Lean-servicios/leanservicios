@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import heroImg from "@/assets/hero-lean.jpg";
-import logoBlanco from "@/assets/lean-logo-horizontal-blanco.png.asset.json";
 
 const pilares = ["Limpieza", "Fumigación", "Espacios verdes", "Obras civiles"];
 
@@ -20,15 +19,7 @@ export function Hero() {
 
       <div className="section-shell py-20 text-primary-foreground sm:py-24">
         <div className="max-w-3xl animate-rise">
-          <img
-            src={logoBlanco.url}
-            alt="LEAN Servicios Integrales S.A.S."
-            className="h-16 w-auto sm:h-20"
-            width={560}
-            height={160}
-          />
-
-          <h1 className="mt-6 text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
             Cuidamos el pulso de cada espacio.
           </h1>
 
