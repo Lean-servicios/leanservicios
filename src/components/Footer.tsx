@@ -21,7 +21,7 @@ export function Footer() {
         <div>
           <img
             src={logoBlanco.url}
-            alt="LEAN Servicios Integrales S.A.S."
+            alt="LEAN - Servicios Integrales"
             className="h-12 w-auto"
             loading="lazy"
             width={480}

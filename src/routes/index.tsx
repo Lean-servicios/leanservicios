@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "LEAN Servicios Integrales S.A.S.",
+          name: "LEAN - Servicios Integrales",
           alternateName: "Lean Service",
           slogan: "Cuidamos el pulso de cada espacio.",
           description: descripcion,

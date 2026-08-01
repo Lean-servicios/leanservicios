@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Lean brinda soluciones integrales de limpieza, fumigación, mantenimiento de espacios verdes y obras civiles adaptadas a empresas, industrias e instituciones.",
       },
-      { name: "author", content: "LEAN Servicios Integrales S.A.S." },
+      { name: "author", content: "LEAN - Servicios Integrales" },
       { property: "og:site_name", content: "Lean Service" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "es_AR" },
