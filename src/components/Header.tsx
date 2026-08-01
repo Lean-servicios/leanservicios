@@ -43,7 +43,7 @@ export function Header({ solid = false }: { solid?: boolean }) {
           <img
             src={isSolid ? logoColor.url : logoBlanco.url}
             alt="LEAN Servicios Integrales S.A.S."
-            className="h-12 w-auto sm:h-14"
+            className="h-16 w-auto sm:h-20"
             width={480}
             height={140}
           />
