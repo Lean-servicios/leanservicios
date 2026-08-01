@@ -15,6 +15,7 @@ export const Route = createFileRoute("/terminos-y-condiciones")({
       { property: "og:title", content: titulo },
       { property: "og:description", content: descripcion },
       { property: "og:type", content: "article" },
+      { property: "og:url", content: "https://leanservicios.lovable.app/terminos-y-condiciones" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://leanservicios.lovable.app/terminos-y-condiciones" }],
