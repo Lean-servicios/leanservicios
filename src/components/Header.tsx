@@ -4,8 +4,8 @@ import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logoColor from "@/assets/lean-logo-horizontal-color.png.asset.json";
-import logoBlanco from "@/assets/lean-logo-horizontal-blanco.png.asset.json";
+import isotipoColor from "@/assets/lean-isotipo-color.png.asset.json";
+import isotipoBlanco from "@/assets/lean-isotipo-blanco.png.asset.json";
 
 const nav = [
   { label: "Inicio", href: "/#inicio" },
