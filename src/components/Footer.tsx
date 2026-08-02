@@ -34,7 +34,7 @@ export function Footer() {
               </span>
             </span>
           </a>
-          <p className="text-primary-foreground/75">{siteConfig.slogan}</p>
+          <p className="mt-5 text-primary-foreground/75">{siteConfig.slogan}</p>
           <p className="mt-4 text-sm text-primary-foreground/70">
             Limpieza | Fumigación | Espacios verdes | Obras civiles
           </p>
