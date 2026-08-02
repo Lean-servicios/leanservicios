@@ -19,15 +19,21 @@ export function Footer() {
     <footer className="gradient-brand text-primary-foreground">
       <div className="section-shell grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <img
-            src={logoBlanco.url}
-            alt="LEAN - Servicios Integrales"
-            className="h-12 w-auto"
-            loading="lazy"
-            width={480}
-            height={140}
-          />
-          <p className="mt-5 text-lg font-semibold">{siteConfig.nombre}</p>
+          <a href="/#inicio" className="flex items-center gap-2.5" aria-label="LEAN Servicios — Inicio">
+            <img
+              src={isotipoBlanco.url}
+              alt=""
+              aria-hidden="true"
+              className="h-14 w-auto"
+              loading="lazy"
+            />
+            <span className="flex flex-col leading-none text-primary-foreground">
+              <span className="text-2xl font-extrabold tracking-tight sm:text-3xl">LEAN</span>
+              <span className="text-sm font-semibold tracking-[0.1em] opacity-80 sm:text-base">
+                Servicios
+              </span>
+            </span>
+          </a>
           <p className="text-primary-foreground/75">{siteConfig.slogan}</p>
           <p className="mt-4 text-sm text-primary-foreground/70">
             Limpieza | Fumigación | Espacios verdes | Obras civiles
