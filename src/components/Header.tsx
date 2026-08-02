@@ -39,14 +39,24 @@ export function Header({ solid = false }: { solid?: boolean }) {
       )}
     >
       <div className="section-shell grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3">
-        <a href="/#inicio" className="flex min-w-0 items-center" aria-label="LEAN SERVICE — Inicio">
+        <a href="/#inicio" className="flex min-w-0 items-center gap-2.5" aria-label="LEAN Servicios — Inicio">
           <img
-            src={isSolid ? logoColor.url : logoBlanco.url}
-            alt="LEAN - Servicios Integrales"
-            className="h-16 w-auto sm:h-20"
-            width={480}
-            height={140}
+            src={isSolid ? isotipoColor.url : isotipoBlanco.url}
+            alt=""
+            aria-hidden="true"
+            className="h-14 w-auto sm:h-20"
           />
+          <span
+            className={cn(
+              "flex flex-col leading-none",
+              isSolid ? "text-primary" : "text-primary-foreground",
+            )}
+          >
+            <span className="text-2xl font-extrabold tracking-tight sm:text-3xl">LEAN</span>
+            <span className="text-sm font-semibold tracking-[0.1em] opacity-80 sm:text-base">
+              Servicios
+            </span>
+          </span>
         </a>
 
         <div className="flex items-center gap-2">
