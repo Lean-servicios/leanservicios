@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
-import heroImg from "@/assets/hero-lean.jpg";
+const heroImg = "/assets/lean/hero-lean.jpg";
 
 const pilares = ["Limpieza", "Fumigación", "Espacios verdes", "Obras civiles"];
 

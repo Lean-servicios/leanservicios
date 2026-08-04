@@ -1,4 +1,4 @@
-import industriaImg from "@/assets/industria.jpg";
+const industriaImg = "/assets/lean/industria.jpg";
 
 const capacidades = [
   "Equipos operativos y personal de oficio",

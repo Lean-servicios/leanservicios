@@ -1,7 +1,7 @@
 const limpiezaImg = { url: "/assets/lean/serv-limpieza-institucional.jpg" };
-import fumigacionImg from "@/assets/serv-fumigacion.jpg";
-import verdesImg from "@/assets/serv-verdes.jpg";
-import obrasImg from "@/assets/serv-obras.jpg";
+const fumigacionImg = "/assets/lean/serv-fumigacion.jpg";
+const verdesImg = "/assets/lean/serv-verdes.jpg";
+const obrasImg = "/assets/lean/serv-obras.jpg";
 const limpiezaEventos = { url: "/assets/lean/trabajo-limpieza-eventos.jpg" };
 const limpiezaAuditorio = { url: "/assets/lean/trabajo-limpieza-auditorio.jpg" };
 const fumigacionEstadio = { url: "/assets/lean/trabajo-fumigacion-estadio.jpg" };
