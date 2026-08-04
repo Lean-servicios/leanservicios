@@ -3,7 +3,7 @@ import { Instagram, Linkedin, Mail, MapPin, Phone, Clock } from "lucide-react";
 
 import { siteConfig, whatsappLink } from "@/config/site";
 import { servicios } from "@/config/content";
-import isotipoBlanco from "@/assets/lean-isotipo-blanco.png.asset.json";
+const isotipoBlanco = { url: "/assets/lean/lean-isotipo-blanco.png" };
 
 export function Footer() {
   const year = new Date().getFullYear();

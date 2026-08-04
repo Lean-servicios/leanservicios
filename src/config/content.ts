@@ -1,10 +1,10 @@
-import limpiezaImg from "@/assets/serv-limpieza-institucional.jpg.asset.json";
+const limpiezaImg = { url: "/assets/lean/serv-limpieza-institucional.jpg" };
 import fumigacionImg from "@/assets/serv-fumigacion.jpg";
 import verdesImg from "@/assets/serv-verdes.jpg";
 import obrasImg from "@/assets/serv-obras.jpg";
-import limpiezaEventos from "@/assets/trabajo-limpieza-eventos.jpg.asset.json";
-import limpiezaAuditorio from "@/assets/trabajo-limpieza-auditorio.jpg.asset.json";
-import fumigacionEstadio from "@/assets/trabajo-fumigacion-estadio.jpg.asset.json";
+const limpiezaEventos = { url: "/assets/lean/trabajo-limpieza-eventos.jpg" };
+const limpiezaAuditorio = { url: "/assets/lean/trabajo-limpieza-auditorio.jpg" };
+const fumigacionEstadio = { url: "/assets/lean/trabajo-fumigacion-estadio.jpg" };
 
 /** Contenido editable: servicios, proceso, diferenciales y trabajos. */
 
