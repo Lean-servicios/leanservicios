@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap: agregar la URL absoluta cuando el dominio esté conectado.
+Sitemap: https://leanservicios.lovable.app/sitemap.xml
