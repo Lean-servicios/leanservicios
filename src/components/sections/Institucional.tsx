@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 
-import institucionalImg from "@/assets/institucional.jpg";
+const institucionalImg = "/assets/lean/institucional.jpg";
 import { diferenciales } from "@/config/content";
 import { siteConfig } from "@/config/site";
 
