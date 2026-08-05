@@ -43,7 +43,7 @@ export function Empleo({ compacto = false }: { compacto?: boolean }) {
 
             {!compacto && (
               <Button asChild variant="outline" size="lg">
-                <Link to="/trabaja-con-nosotros">Ver más información</Link>
+                <Link to="/postulate">Ver más información</Link>
               </Button>
             )}
           </div>

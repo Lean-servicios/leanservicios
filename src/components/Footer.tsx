@@ -106,8 +106,8 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <Link to="/trabaja-con-nosotros" className="text-primary-foreground/85 hover:text-primary-foreground">
-                Trabajá con nosotros
+              <Link to="/postulate" className="text-primary-foreground/85 hover:text-primary-foreground">
+                Postulate
               </Link>
             </li>
             <li>
