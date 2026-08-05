@@ -11,9 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PoliticaDePrivacidadRouteImport } from './routes/politica-de-privacidad'
+import { Route as PostulateRouteImport } from './routes/postulate'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TerminosYCondicionesRouteImport } from './routes/terminos-y-condiciones'
-import { Route as TrabajaConNosotrosRouteImport } from './routes/trabaja-con-nosotros'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const PoliticaDePrivacidadRoute = PoliticaDePrivacidadRouteImport.update({
   id: '/politica-de-privacidad',
   path: '/politica-de-privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PostulateRoute = PostulateRouteImport.update({
+  id: '/postulate',
+  path: '/postulate',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -35,64 +40,59 @@ const TerminosYCondicionesRoute = TerminosYCondicionesRouteImport.update({
   path: '/terminos-y-condiciones',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TrabajaConNosotrosRoute = TrabajaConNosotrosRouteImport.update({
-  id: '/trabaja-con-nosotros',
-  path: '/trabaja-con-nosotros',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/postulate': typeof PostulateRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
-  '/trabaja-con-nosotros': typeof TrabajaConNosotrosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/postulate': typeof PostulateRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
-  '/trabaja-con-nosotros': typeof TrabajaConNosotrosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/politica-de-privacidad': typeof PoliticaDePrivacidadRoute
+  '/postulate': typeof PostulateRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terminos-y-condiciones': typeof TerminosYCondicionesRoute
-  '/trabaja-con-nosotros': typeof TrabajaConNosotrosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/politica-de-privacidad'
+    | '/postulate'
     | '/sitemap.xml'
     | '/terminos-y-condiciones'
-    | '/trabaja-con-nosotros'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/politica-de-privacidad'
+    | '/postulate'
     | '/sitemap.xml'
     | '/terminos-y-condiciones'
-    | '/trabaja-con-nosotros'
   id:
     | '__root__'
     | '/'
     | '/politica-de-privacidad'
+    | '/postulate'
     | '/sitemap.xml'
     | '/terminos-y-condiciones'
-    | '/trabaja-con-nosotros'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PoliticaDePrivacidadRoute: typeof PoliticaDePrivacidadRoute
+  PostulateRoute: typeof PostulateRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TerminosYCondicionesRoute: typeof TerminosYCondicionesRoute
-  TrabajaConNosotrosRoute: typeof TrabajaConNosotrosRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -111,6 +111,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PoliticaDePrivacidadRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/postulate': {
+      id: '/postulate'
+      path: '/postulate'
+      fullPath: '/postulate'
+      preLoaderRoute: typeof PostulateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -125,22 +132,15 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TerminosYCondicionesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/trabaja-con-nosotros': {
-      id: '/trabaja-con-nosotros'
-      path: '/trabaja-con-nosotros'
-      fullPath: '/trabaja-con-nosotros'
-      preLoaderRoute: typeof TrabajaConNosotrosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PoliticaDePrivacidadRoute: PoliticaDePrivacidadRoute,
+  PostulateRoute: PostulateRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TerminosYCondicionesRoute: TerminosYCondicionesRoute,
-  TrabajaConNosotrosRoute: TrabajaConNosotrosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
