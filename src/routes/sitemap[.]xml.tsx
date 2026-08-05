@@ -11,7 +11,7 @@ type Entrada = {
 
 const rutas: Entrada[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
-  { path: "/trabaja-con-nosotros", changefreq: "monthly", priority: "0.8" },
+  { path: "/postulate", changefreq: "monthly", priority: "0.8" },
   { path: "/politica-de-privacidad", changefreq: "yearly", priority: "0.3" },
   { path: "/terminos-y-condiciones", changefreq: "yearly", priority: "0.3" },
 ];

@@ -3,11 +3,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Empleo } from "@/components/sections/Empleo";
 
-const titulo = "Trabajá con nosotros | Lean Service";
+const titulo = "Postulate | Lean Service";
 const descripcion =
   "Sumate al equipo de Lean Service: búsquedas en limpieza, espacios verdes, fumigación y obras civiles. Cargá tu CV en el formulario.";
 
-export const Route = createFileRoute("/trabaja-con-nosotros")({
+export const Route = createFileRoute("/postulate")({
   head: () => ({
     meta: [
       { title: titulo },
@@ -15,15 +15,15 @@ export const Route = createFileRoute("/trabaja-con-nosotros")({
       { property: "og:title", content: titulo },
       { property: "og:description", content: descripcion },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://leanservicios.lovable.app/trabaja-con-nosotros" },
+      { property: "og:url", content: "https://leanservicios.lovable.app/postulate" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://leanservicios.lovable.app/trabaja-con-nosotros" }],
+    links: [{ rel: "canonical", href: "https://leanservicios.lovable.app/postulate" }],
   }),
-  component: TrabajaConNosotros,
+  component: Postulate,
 });
 
-function TrabajaConNosotros() {
+function Postulate() {
   return (
     <SiteLayout solidHeader>
       <div className="gradient-brand pt-28 pb-16 text-primary-foreground">
