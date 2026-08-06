@@ -25,7 +25,7 @@ const optionalLabel = " (opcional)";
 
 export function ContactForm() {
   const enviar = useServerFn(enviarConsulta);
-  const [estado, setEstado] = useState<"idle" | "enviado" | "pendiente" | "error">("idle");
+  const [estado, setEstado] = useState<"idle" | "enviado" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [mostrarExtras, setMostrarExtras] = useState(false);
 
