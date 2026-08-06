@@ -25,7 +25,7 @@ const optionalLabel = " (opcional)";
 
 export function ContactForm() {
   const enviar = useServerFn(enviarConsulta);
-  const [estado, setEstado] = useState<"idle" | "enviado" | "pendiente" | "error">("idle");
+  const [estado, setEstado] = useState<"idle" | "enviado" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [mostrarExtras, setMostrarExtras] = useState(false);
 
@@ -62,8 +62,8 @@ export function ContactForm() {
   const onSubmit = async (values: ContactInput) => {
     setErrorMsg(null);
     try {
-      const res = await enviar({ data: values });
-      setEstado(res.estado === "enviado" ? "enviado" : "pendiente");
+      await enviar({ data: values });
+      setEstado("enviado");
       reset({ servicio: "Limpieza" });
     } catch (e) {
       setEstado("error");
@@ -82,7 +82,7 @@ export function ContactForm() {
       </p>
     ) : null;
 
-  if (estado === "enviado" || estado === "pendiente") {
+  if (estado === "enviado") {
     return (
       <div className="card-surface p-8 text-center">
         <CheckCircle2 className="mx-auto size-10 text-primary" aria-hidden />
@@ -91,14 +91,6 @@ export function ContactForm() {
           Recibimos tus datos y nuestro equipo se pondrá en contacto para coordinar una visita o
           preparar una propuesta.
         </p>
-        {estado === "pendiente" && (
-          <p className="mt-4 rounded-md bg-secondary p-3 text-left text-xs text-muted-foreground">
-            <strong>Nota interna (visible sólo hasta finalizar la configuración):</strong> el envío
-            de correo todavía no está configurado. Agregar los secretos{" "}
-            <code>CONTACT_NOTIFICATION_EMAIL</code> y <code>EMAIL_SERVICE_API_KEY</code> para
-            recibir las consultas por email.
-          </p>
-        )}
         <Button variant="outline" className="mt-6" onClick={() => setEstado("idle")}>
           Enviar otra consulta
         </Button>
